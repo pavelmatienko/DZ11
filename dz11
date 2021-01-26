@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="/index.js"></script> -->
+    <script>
+            function createCalculator() {
+                 let count = 10;
+                 function sum() {
+                     count = (count + 5);
+                 };
+                 function mult() {
+                     count = (count * 10);
+                 };
+                 function sub() {
+                     count = (count - 40);
+                 };
+                 function div() {
+                     count = (count / 10);
+                  };
+                 function set() {
+                     count = 100;
+                 }
+
+                 return{
+                     sum,
+                     mult,
+                     sub,
+                     div,
+                     set,
+                     showRezult() {
+                         console.log(count);
+                      }
+                 }
+            };
+            const calc = createCalculator();
+              
+            calc.sum(); /// 15
+            calc.showRezult();
+            calc.mult(); // 150
+            calc.showRezult();
+            calc.sub(); // 110
+            calc.showRezult();
+            calc.div(); // 11
+            calc.showRezult();
+            calc.set(); // 11
+            calc.showRezult();
+    </script>
+</body>
+</html>
