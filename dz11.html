@@ -8,8 +8,10 @@
 <body>
     <!-- <script src="/index.js"></script> -->
     <script>
-            function createCalculator() {
-                let count = 10;
+            const calc = createCalculator(10);
+
+            function createCalculator(calc) {
+                let count = calc;
 
                 function sum(inputNumber) {
                     count = (count + inputNumber);
@@ -38,7 +40,6 @@
                     }
                 }
             };
-const calc = createCalculator();
 
 
 calc.sum(5); /// 15
