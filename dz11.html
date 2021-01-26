@@ -9,49 +9,28 @@
     <!-- <script src="/index.js"></script> -->
     <script>
             const calc = createCalculator(10);
-
             function createCalculator(calc) {
                 let count = calc;
-
-                function sum(inputNumber) {
-                    count = (count + inputNumber);
-                };
-                function mult(inputNumber) {
-                    count = (count * inputNumber);
-                };
-                function sub(inputNumber) {
-                    count = (count - inputNumber);
-                };
-                function div(inputNumber) {
-                    count = (count / inputNumber);
-                };
-                function set(inputNumber) {
-                    count = inputNumber;
-                }
-
                 return{
-                    sum,
-                    mult,
-                    sub,
-                    div,
-                    set,
-                    showRezult() {
-                        console.log(count);
-                    }
+                    sum(inputNumber) {count = (count + inputNumber);},
+                    mult(inputNumber) {count = (count * inputNumber);},
+                    sub(inputNumber) {count = (count - inputNumber);},
+                    div(inputNumber) {count = (count / inputNumber);},
+                    set(inputNumber) {count = (inputNumber);},
+                    showRezult() {console.log(count);}
                 }
             };
 
-
-calc.sum(5); /// 15
-calc.showRezult();
-calc.mult(10); // 150
-calc.showRezult();
-calc.sub(40); // 110
-calc.showRezult();
-calc.div(10); // 11
-calc.showRezult();
-calc.set(100); // 100
-calc.showRezult();
+            calc.sum(5); /// 15
+            calc.showRezult();
+            calc.mult(10); // 150
+            calc.showRezult();
+            calc.sub(40); // 110
+            calc.showRezult();
+            calc.div(10); // 11
+            calc.showRezult();
+            calc.set(100); // 100
+            calc.showRezult();
     </script>
 </body>
 </html>
